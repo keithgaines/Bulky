@@ -1,0 +1,12 @@
+C:\repos_personal\ecommerceMVC\Bulky.Utility\bin\Debug\net7.0\Bulky.Utility.deps.json
+C:\repos_personal\ecommerceMVC\Bulky.Utility\bin\Debug\net7.0\Bulky.Utility.dll
+C:\repos_personal\ecommerceMVC\Bulky.Utility\bin\Debug\net7.0\Bulky.Utility.pdb
+C:\repos_personal\ecommerceMVC\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.csproj.AssemblyReference.cache
+C:\repos_personal\ecommerceMVC\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos_personal\ecommerceMVC\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.AssemblyInfoInputs.cache
+C:\repos_personal\ecommerceMVC\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.AssemblyInfo.cs
+C:\repos_personal\ecommerceMVC\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.csproj.CoreCompileInputs.cache
+C:\repos_personal\ecommerceMVC\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.dll
+C:\repos_personal\ecommerceMVC\Bulky.Utility\obj\Debug\net7.0\refint\Bulky.Utility.dll
+C:\repos_personal\ecommerceMVC\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.pdb
+C:\repos_personal\ecommerceMVC\Bulky.Utility\obj\Debug\net7.0\ref\Bulky.Utility.dll

@@ -1,0 +1,12 @@
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\bin\Debug\net7.0\Bulky.DataAccess.deps.json
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\bin\Debug\net7.0\Bulky.DataAccess.dll
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\bin\Debug\net7.0\Bulky.DataAccess.pdb
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.AssemblyInfo.cs
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.dll
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\refint\Bulky.DataAccess.dll
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.pdb
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\ref\Bulky.DataAccess.dll
