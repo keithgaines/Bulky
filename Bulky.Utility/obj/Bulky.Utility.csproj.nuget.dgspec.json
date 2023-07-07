@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\repos\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\repos\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
         "packagesPath": "C:\\Users\\KeithGaines\\.nuget\\packages\\",
         "outputPath": "C:\\repos\\Bulky\\Bulky.Utility\\obj\\",
+=======
+    "C:\\repos_personal\\ecommerceMVC\\Bulky.Utility\\Bulky.Utility.csproj": {}
+  },
+  "projects": {
+    "C:\\repos_personal\\ecommerceMVC\\Bulky.Utility\\Bulky.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repos_personal\\ecommerceMVC\\Bulky.Utility\\Bulky.Utility.csproj",
+        "projectName": "Bulky.Utility",
+        "projectPath": "C:\\repos_personal\\ecommerceMVC\\Bulky.Utility\\Bulky.Utility.csproj",
+        "packagesPath": "C:\\Users\\KeithGaines\\.nuget\\packages\\",
+        "outputPath": "C:\\repos_personal\\ecommerceMVC\\Bulky.Utility\\obj\\",
+>>>>>>> 73e06d1a160ea277776a28bcd6353207923d0cd3
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +58,7 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+<<<<<<< HEAD
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -64,6 +79,8 @@
               "version": "[7.0.7, )"
             }
           },
+=======
+>>>>>>> 73e06d1a160ea277776a28bcd6353207923d0cd3
           "imports": [
             "net461",
             "net462",

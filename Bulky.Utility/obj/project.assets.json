@@ -1,6 +1,7 @@
 {
   "version": 3,
   "targets": {
+<<<<<<< HEAD
     "net7.0": {
       "Azure.Core/1.24.0": {
         "type": "package",
@@ -11334,6 +11335,13 @@
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.8",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.7"
     ]
+=======
+    "net7.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net7.0": []
+>>>>>>> 73e06d1a160ea277776a28bcd6353207923d0cd3
   },
   "packageFolders": {
     "C:\\Users\\KeithGaines\\.nuget\\packages\\": {},
@@ -11342,11 +11350,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\repos\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
       "projectName": "Bulky.Utility",
       "projectPath": "C:\\repos\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
       "packagesPath": "C:\\Users\\KeithGaines\\.nuget\\packages\\",
       "outputPath": "C:\\repos\\Bulky\\Bulky.Utility\\obj\\",
+=======
+      "projectUniqueName": "C:\\repos_personal\\ecommerceMVC\\Bulky.Utility\\Bulky.Utility.csproj",
+      "projectName": "Bulky.Utility",
+      "projectPath": "C:\\repos_personal\\ecommerceMVC\\Bulky.Utility\\Bulky.Utility.csproj",
+      "packagesPath": "C:\\Users\\KeithGaines\\.nuget\\packages\\",
+      "outputPath": "C:\\repos_personal\\ecommerceMVC\\Bulky.Utility\\obj\\",
+>>>>>>> 73e06d1a160ea277776a28bcd6353207923d0cd3
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11379,6 +11395,7 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+<<<<<<< HEAD
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -11399,6 +11416,8 @@
             "version": "[7.0.7, )"
           }
         },
+=======
+>>>>>>> 73e06d1a160ea277776a28bcd6353207923d0cd3
         "imports": [
           "net461",
           "net462",

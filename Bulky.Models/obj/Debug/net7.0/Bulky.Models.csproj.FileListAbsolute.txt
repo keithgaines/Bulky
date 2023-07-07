@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\repos\Bulky\Bulky.Models\bin\Debug\net7.0\Bulky.Models.deps.json
 C:\repos\Bulky\Bulky.Models\bin\Debug\net7.0\Bulky.Models.runtimeconfig.json
 C:\repos\Bulky\Bulky.Models\bin\Debug\net7.0\Bulky.Models.dll
@@ -12,3 +13,17 @@ C:\repos\Bulky\Bulky.Models\obj\Debug\net7.0\refint\Bulky.Models.dll
 C:\repos\Bulky\Bulky.Models\obj\Debug\net7.0\Bulky.Models.pdb
 C:\repos\Bulky\Bulky.Models\obj\Debug\net7.0\Bulky.Models.genruntimeconfig.cache
 C:\repos\Bulky\Bulky.Models\obj\Debug\net7.0\ref\Bulky.Models.dll
+=======
+C:\repos_personal\ecommerceMVC\Bulky.Models\bin\Debug\net7.0\Bulky.Models.deps.json
+C:\repos_personal\ecommerceMVC\Bulky.Models\bin\Debug\net7.0\Bulky.Models.dll
+C:\repos_personal\ecommerceMVC\Bulky.Models\bin\Debug\net7.0\Bulky.Models.pdb
+C:\repos_personal\ecommerceMVC\Bulky.Models\obj\Debug\net7.0\Bulky.Models.csproj.AssemblyReference.cache
+C:\repos_personal\ecommerceMVC\Bulky.Models\obj\Debug\net7.0\Bulky.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos_personal\ecommerceMVC\Bulky.Models\obj\Debug\net7.0\Bulky.Models.AssemblyInfoInputs.cache
+C:\repos_personal\ecommerceMVC\Bulky.Models\obj\Debug\net7.0\Bulky.Models.AssemblyInfo.cs
+C:\repos_personal\ecommerceMVC\Bulky.Models\obj\Debug\net7.0\Bulky.Models.csproj.CoreCompileInputs.cache
+C:\repos_personal\ecommerceMVC\Bulky.Models\obj\Debug\net7.0\Bulky.Models.dll
+C:\repos_personal\ecommerceMVC\Bulky.Models\obj\Debug\net7.0\refint\Bulky.Models.dll
+C:\repos_personal\ecommerceMVC\Bulky.Models\obj\Debug\net7.0\Bulky.Models.pdb
+C:\repos_personal\ecommerceMVC\Bulky.Models\obj\Debug\net7.0\ref\Bulky.Models.dll
+>>>>>>> 73e06d1a160ea277776a28bcd6353207923d0cd3

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\repos\Bulky\Bulky.DataAccess\bin\Debug\net7.0\Bulky.DataAccess.deps.json
 C:\repos\Bulky\Bulky.DataAccess\bin\Debug\net7.0\Bulky.DataAccess.runtimeconfig.json
 C:\repos\Bulky\Bulky.DataAccess\bin\Debug\net7.0\Bulky.DataAccess.dll
@@ -15,3 +16,17 @@ C:\repos\Bulky\Bulky.DataAccess\obj\Debug\net7.0\refint\Bulky.DataAccess.dll
 C:\repos\Bulky\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.pdb
 C:\repos\Bulky\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.genruntimeconfig.cache
 C:\repos\Bulky\Bulky.DataAccess\obj\Debug\net7.0\ref\Bulky.DataAccess.dll
+=======
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\bin\Debug\net7.0\Bulky.DataAccess.deps.json
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\bin\Debug\net7.0\Bulky.DataAccess.dll
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\bin\Debug\net7.0\Bulky.DataAccess.pdb
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.AssemblyInfo.cs
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.dll
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\refint\Bulky.DataAccess.dll
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.pdb
+C:\repos_personal\ecommerceMVC\Bulky.DataAccess\obj\Debug\net7.0\ref\Bulky.DataAccess.dll
+>>>>>>> 73e06d1a160ea277776a28bcd6353207923d0cd3

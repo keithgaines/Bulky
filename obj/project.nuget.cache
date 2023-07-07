@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "j0lvvn5JWTpbOcJ58rjuhZCUK9G6xYSvkqHLBpR2JTSyM1/8dTdOg9kFiOjP3KahJgVxvnnQb46caA9Z+KOQ1Q==",
   "success": true,
   "projectFilePath": "C:\\repos\\Bulky\\ecommerceMVC.csproj",
+=======
+  "dgSpecHash": "ap6qOECa+n40/1LRQDIQaZ1AgfztGjewO8WDwlwM3Bt5R7F9Zd+h8TLEHf+HJQfGYJTIlIxPlzVtCZKIQZVp3g==",
+  "success": true,
+  "projectFilePath": "C:\\repos_personal\\ecommerceMVC\\ecommerceMVC.csproj",
+>>>>>>> 73e06d1a160ea277776a28bcd6353207923d0cd3
   "expectedPackageFiles": [
     "C:\\Users\\KeithGaines\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\KeithGaines\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

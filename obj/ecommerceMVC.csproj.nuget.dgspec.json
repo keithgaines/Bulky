@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\repos\\Bulky\\ecommerceMVC.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\repos\\Bulky\\ecommerceMVC.csproj",
         "packagesPath": "C:\\Users\\KeithGaines\\.nuget\\packages\\",
         "outputPath": "C:\\repos\\Bulky\\obj\\",
+=======
+    "C:\\repos_personal\\ecommerceMVC\\ecommerceMVC.csproj": {}
+  },
+  "projects": {
+    "C:\\repos_personal\\ecommerceMVC\\ecommerceMVC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repos_personal\\ecommerceMVC\\ecommerceMVC.csproj",
+        "projectName": "ecommerceMVC",
+        "projectPath": "C:\\repos_personal\\ecommerceMVC\\ecommerceMVC.csproj",
+        "packagesPath": "C:\\Users\\KeithGaines\\.nuget\\packages\\",
+        "outputPath": "C:\\repos_personal\\ecommerceMVC\\obj\\",
+>>>>>>> 73e06d1a160ea277776a28bcd6353207923d0cd3
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

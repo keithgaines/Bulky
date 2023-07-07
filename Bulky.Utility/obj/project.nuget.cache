@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "3po+tQRDGdmQlNgpoGUVYV/DaGf2kVx3mNXFvOx526frjUaFxIWSUPsUfhach7FTej7CAni/tded6geHLiDnHg==",
   "success": true,
   "projectFilePath": "C:\\repos\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
@@ -228,5 +229,11 @@
     "C:\\Users\\KeithGaines\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\KeithGaines\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "LGV1oSeKQLfKWJeqe11MNmAh16c4RQaJEh4TUUt36E4t2mqDA7DQKcGeznaH55SPPr7mBkZiz3U+K/Lhr+KMng==",
+  "success": true,
+  "projectFilePath": "C:\\repos_personal\\ecommerceMVC\\Bulky.Utility\\Bulky.Utility.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> 73e06d1a160ea277776a28bcd6353207923d0cd3
   "logs": []
 }
