@@ -1,4 +1,4 @@
-using ecommerceMVC.Data;
+using Bulky.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

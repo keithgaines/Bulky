@@ -1,8 +1,8 @@
-﻿using ecommerceMVC.Data;
-using ecommerceMVC.Models;
+﻿using Bulky.Data;
+using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ecommerceMVC.Controllers
+namespace Bulky.Controllers
 {
     public class CategoryController : Controller
     {

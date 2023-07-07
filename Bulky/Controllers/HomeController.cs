@@ -1,8 +1,8 @@
-﻿using ecommerceMVC.Models;
+﻿using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace ecommerceMVC.Controllers
+namespace Bulky.Controllers
 {
     public class HomeController : Controller
     {
