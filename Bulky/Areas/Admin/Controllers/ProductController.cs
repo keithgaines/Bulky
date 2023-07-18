@@ -7,39 +7,44 @@ namespace Bulky.Areas.Admin.Controllers
     [Area("Admin")]
     public class ProductController : Controller
     {
-        private readonly IProductRepository _ProductRepo;
-        public ProductController(IProductRepository db)
+        private readonly IProductRepository _productRepo;
+        private readonly ICategoryRepository _categoryRepo;
+
+        public ProductController(IProductRepository productRepo, ICategoryRepository categoryRepo)
         {
-            _ProductRepo = db;
+            _productRepo = productRepo;
+            _categoryRepo = categoryRepo;
         }
+
         public IActionResult Index()
         {
-            List<Product> objProductList = _ProductRepo.GetAll().ToList();
+            List<Product> objProductList = _productRepo.GetAll().ToList();
             return View(objProductList);
         }
 
         public IActionResult Create()
         {
+            var categories = _categoryRepo.GetAll().ToList();
+            ViewData["Categories"] = categories;
+
             return View();
         }
 
         [HttpPost]
         public IActionResult Create(Product obj)
         {
-            /*if (obj.Title == obj.DisplayOrder.ToString())
-            {
-                ModelState.AddModelError("name", "The DisplayOrder cannot match the name.");
-            }*/
-
             if (ModelState.IsValid)
             {
-                _ProductRepo.Add(obj);
-                _ProductRepo.Save();
+                _productRepo.Add(obj);
+                _productRepo.Save();
                 TempData["success"] = "Product created successfully.";
                 return RedirectToAction("Index");
-
             }
-            return View();
+
+            var categories = _categoryRepo.GetAll().ToList();
+            ViewData["Categories"] = categories;
+
+            return View(obj);
         }
 
         public IActionResult Edit(int? id)
@@ -48,13 +53,15 @@ namespace Bulky.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            Product? ProductfromDb = _ProductRepo.Get(u => u.Id == id);
-
-            if (ProductfromDb == null)
+            Product productFromDb = _productRepo.Get(p => p.Id == id);
+            if (productFromDb == null)
             {
                 return NotFound();
             }
-            return View(ProductfromDb);
+            var categories = _categoryRepo.GetAll().ToList();
+            ViewData["Categories"] = categories;
+
+            return View(productFromDb);
         }
 
         [HttpPost]
@@ -62,13 +69,16 @@ namespace Bulky.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _ProductRepo.Update(obj);
-                _ProductRepo.Save();
+                _productRepo.Update(obj);
+                _productRepo.Save();
                 TempData["success"] = "Product updated successfully.";
                 return RedirectToAction("Index");
-
             }
-            return View();
+
+            var categories = _categoryRepo.GetAll().ToList();
+            ViewData["Categories"] = categories;
+
+            return View(obj);
         }
 
         public IActionResult Delete(int? id)
@@ -77,25 +87,30 @@ namespace Bulky.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            Product? ProductfromDb = _ProductRepo.Get(u => u.Id == id);
-
-            if (ProductfromDb == null)
+            Product productFromDb = _productRepo.Get(p => p.Id == id);
+            if (productFromDb == null)
             {
                 return NotFound();
             }
-            return View(ProductfromDb);
+
+            return View(productFromDb);
         }
 
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int? id)
+        [HttpPost]
+        public IActionResult DeleteConfirmed(int? id)
         {
-            Product? obj = _ProductRepo.Get(u => u.Id == id);
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Product obj = _productRepo.Get(p => p.Id == id);
             if (obj == null)
             {
                 return NotFound();
             }
-            _ProductRepo.Remove(obj);
-            _ProductRepo.Save();
+            _productRepo.Remove(obj);
+            _productRepo.Save();
             TempData["success"] = "Product deleted successfully.";
             return RedirectToAction("Index");
         }

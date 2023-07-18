@@ -31,9 +31,19 @@
         </div>
         <div class="mb-3 row">
             <label asp-for="CategoryId" class="p-0"></label>
-            <select asp-for="CategoryId" class="form-control"></select>
+            <select asp-for="CategoryId" class="form-control">
+                <option value="">Select a Category</option>
+                @if (ViewData["Categories"] != null)
+                {
+                    foreach (var category in (List<Category>)ViewData["Categories"])
+                    {
+                        <option value="@category.CategoryId">@category.Name</option>
+                    }
+                }
+            </select>
             <span asp-validation-for="CategoryId" class="text-danger"></span>
         </div>
+
         <div class="mb-3 row">
             <label asp-for="ListPrice" class="p-0"></label>
             <input asp-for="ListPrice" type="text" class="form-control" />
