@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Bulky.Migrations
+namespace Bulky.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230717190355_addProductsToDb")]
-    partial class addProductsToDb
+    [Migration("20230718003044_initialCreate")]
+    partial class initialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace Bulky.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<int>("DisplayOrder")
                         .HasColumnType("int");
 
@@ -48,24 +51,27 @@ namespace Bulky.Migrations
                         new
                         {
                             Id = 1,
+                            CategoryId = 0,
                             DisplayOrder = 1,
                             Name = "Action"
                         },
                         new
                         {
                             Id = 2,
+                            CategoryId = 0,
                             DisplayOrder = 2,
                             Name = "SciFi"
                         },
                         new
                         {
                             Id = 3,
+                            CategoryId = 0,
                             DisplayOrder = 3,
                             Name = "History"
                         });
                 });
 
-            modelBuilder.Entity("Bulky.Models.Models.Product", b =>
+            modelBuilder.Entity("Bulky.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

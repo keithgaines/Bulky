@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Bulky.Models.Models
+namespace Bulky.Models
 {
     public class Product
     {

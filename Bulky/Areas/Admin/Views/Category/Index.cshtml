@@ -1,4 +1,4 @@
-﻿@model List<Category>
+﻿@model IEnumerable<Category>
     <div class="container">
         <div class="row pt-4 pb-3">
             <div class="col-6">
@@ -26,7 +26,7 @@
         </tr>
     </thead>
     <tbody>
-       @foreach(var obj in Model.OrderBy(u => u.DisplayOrder)){
+       @foreach(var obj in Model.OrderBy(u => u.Name)){
         <tr>
             <td>@obj.Name</td>
             <td>
