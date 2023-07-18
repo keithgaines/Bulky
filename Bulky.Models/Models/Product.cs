@@ -16,6 +16,8 @@ namespace Bulky.Models
         public string Description { get; set; }
         public string ISBN { get; set; }
         public string Author { get; set; }
+        public string ImageUrl { get; set; }
+
         [Required]
         [Display(Name = "List Price")]
         [Range(1, 1000)]
