@@ -5,7 +5,8 @@ namespace Bulky.Models
 {
     public class Category
     {
-        public int Id { get; set; }
+        [Key]
+        public int CategoryId { get; set; }
 
         [Required]
         [MaxLength(30)]
@@ -15,6 +16,5 @@ namespace Bulky.Models
         [DisplayName("Display Order")]
         public int DisplayOrder { get; set; }
 
-        public int CategoryId { get; set; }
     }
 }
