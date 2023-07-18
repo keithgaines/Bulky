@@ -29,11 +29,11 @@
             <input asp-for="Author" type="text" class="form-control" />
             <span asp-validation-for="Author" class="text-danger"></span>
         </div>
-        @*<div class="mb-3 row">
+        <div class="mb-3 row">
             <label asp-for="CategoryId" class="p-0"></label>
-            <select asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "Name"))" class="form-control"></select>
+            <select asp-for="CategoryId" class="form-control"></select>
             <span asp-validation-for="CategoryId" class="text-danger"></span>
-        </div>*@
+        </div>
         <div class="mb-3 row">
             <label asp-for="ListPrice" class="p-0"></label>
             <input asp-for="ListPrice" type="text" class="form-control" />

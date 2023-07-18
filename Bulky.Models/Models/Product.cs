@@ -7,8 +7,9 @@ namespace Bulky.Models
     {
         [Key]
         public int Id { get; set; }
-        [ForeignKey(name: "CategoryId")]
         public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
+        public Category Category { get; set; }
 
         [Required]
         public string Title { get; set; }
