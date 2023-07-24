@@ -6,5 +6,7 @@ namespace Bulky.DataAccess.Repository.IRepository
     {
         void Update(Product obj);
         void Save();
+        Product Get(int id);
+        void Remove(int id);
     }
 }

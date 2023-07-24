@@ -6,20 +6,35 @@ namespace Bulky.DataAccess.Repository
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {
-        private ApplicationDbContext _context;
-        public ProductRepository(ApplicationDbContext context) : base(context)
+        private ApplicationDbContext _db;
+        public ProductRepository(ApplicationDbContext db) : base(db)
         {
-            _context = context;
-        }
-
-        public void Save()
-        {
-            throw new NotImplementedException();
+            _db = db;
         }
 
         public void Update(Product obj)
         {
-            throw new NotImplementedException();
+            _db.Products.Update(obj);
+        }
+
+        public void Save()
+        {
+            _db.SaveChanges();
+        }
+
+        public Product Get(int id)
+        {
+            return _db.Products.FirstOrDefault(p => p.Id == id);
+        }
+
+        public void Remove(int id)
+        {
+            var product = _db.Products.FirstOrDefault(p => p.Id == id);
+            if (product != null)
+            {
+                _db.Products.Remove(product);
+                _db.SaveChanges();
+            }
         }
     }
 }
