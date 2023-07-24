@@ -1,6 +1,6 @@
 ﻿@model Bulky.Models.Product
 
-<form method="post">
+<form asp-controller="Product" asp-action="Edit" asp-route-id="@Model.Id" method="post">
     <div class="border p-4 mt-4">
         <div class="row pb-2">
             <h2 class="text-primary">
