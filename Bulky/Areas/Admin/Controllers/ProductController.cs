@@ -27,7 +27,7 @@ namespace Bulky.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Upsert(int id)
         {
-            var product = id == 0 ? new Product() : _unitOfWork.Product.Get(id);
+            var product = id == 0 ? new Product() : _unitOfWork.Product.Get(p => p.Id == id, "Category");
 
             var categories = _unitOfWork.Category.GetAll().ToList();
             ViewData["Categories"] = categories;
