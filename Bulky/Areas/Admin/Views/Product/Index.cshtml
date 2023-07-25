@@ -32,6 +32,7 @@
             </tr>
         </thead>
         <tbody>
+            <!-- Pulls info from Model class. Puts info in table-->
             @foreach (var obj in Model)
             {
                 <tr>
@@ -39,6 +40,7 @@
                     <td>@obj.Author</td>
                     <td>@obj.ISBN</td>
                     <td>
+                        <!-- Pulls Name from Category Model object via FK CategoryId. Category Name included from Controller and Repository code-->
                        @obj.Category.Name
                     </td>
                     <td>

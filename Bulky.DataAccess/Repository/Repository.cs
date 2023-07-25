@@ -16,6 +16,7 @@ namespace Bulky.DataAccess.Repository
         }
 
         // Category, CoverType // variables are case sensitive here
+        // Props included from the Product Controller
         public IEnumerable<T> GetAll(string includeProperties = null)
         {
             IQueryable<T> query = dbSet;
@@ -30,6 +31,7 @@ namespace Bulky.DataAccess.Repository
             return query.ToList();
         }
 
+        // Same as Get all except for single item
         public T Get(Expression<Func<T, bool>> filter, string includeProperties = "")
         {
             IQueryable<T> query = dbSet;
