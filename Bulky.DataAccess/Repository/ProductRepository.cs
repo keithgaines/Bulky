@@ -1,15 +1,30 @@
 ﻿using Bulky.Data;
 using Bulky.DataAccess.Repository.IRepository;
 using Bulky.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace Bulky.DataAccess.Repository
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {
-        private ApplicationDbContext _db;
+        private readonly ApplicationDbContext _db;
+
         public ProductRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
+        }
+
+        public IEnumerable<Product> GetAllProductsIncludingCategories(Expression<Func<Product, bool>> filter = null)
+        {
+            IQueryable<Product> query = _db.Products.Include(p => p.Category);
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            return query.ToList();
         }
 
         public void Update(Product obj)

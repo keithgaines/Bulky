@@ -1,4 +1,5 @@
 ﻿using Bulky.Models;
+using System.Linq.Expressions;
 
 namespace Bulky.DataAccess.Repository.IRepository
 {
@@ -8,5 +9,7 @@ namespace Bulky.DataAccess.Repository.IRepository
         void Save();
         Product Get(int id);
         void Remove(int id);
+
+        IEnumerable<Product> GetAllProductsIncludingCategories(Expression<Func<Product, bool>> filter = null);
     }
 }

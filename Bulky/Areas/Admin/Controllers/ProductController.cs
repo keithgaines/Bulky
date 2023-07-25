@@ -8,17 +8,21 @@ namespace Bulky.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public ProductController(IUnitOfWork unitOfWork)
+        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
         {
             _unitOfWork = unitOfWork;
+            _hostEnvironment = hostEnvironment;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
-            var objProductList = _unitOfWork.Product.GetAll().ToList();
+            var objProductList = _unitOfWork.Product.GetAllProductsIncludingCategories().ToList();
             return View(objProductList);
         }
+
 
         [HttpGet]
         public IActionResult Upsert(int id)
@@ -32,39 +36,38 @@ namespace Bulky.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Upsert(Product obj)
+        public IActionResult Upsert(Product obj, IFormFile? file)
         {
-            if (obj.Id == 0)
+            if (ModelState.IsValid)
             {
-                _unitOfWork.Product.Add(obj);
-                TempData["success"] = "Product created successfully.";
+                if (file != null)
+                {
+                    string uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "images");
+                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                    file.CopyTo(new FileStream(filePath, FileMode.Create));
+                    obj.ImageUrl = uniqueFileName;
+                }
+
+                if (obj.Id == 0)
+                {
+                    _unitOfWork.Product.Add(obj);
+                    TempData["success"] = "Product created successfully.";
+                }
+                else
+                {
+                    _unitOfWork.Product.Update(obj);
+                    TempData["success"] = "Product updated successfully.";
+                }
+
+                _unitOfWork.Save();
+                return RedirectToAction("Index");
             }
-            else
-            {
-                _unitOfWork.Product.Update(obj);
-                TempData["success"] = "Product updated successfully.";
-            }
 
-            _unitOfWork.Save();
-            return RedirectToAction("Index");
-        }
+            var categories = _unitOfWork.Category.GetAll().ToList();
+            ViewData["Categories"] = categories;
 
-        [HttpPost]
-        public IActionResult Create(Product obj)
-        {
-            _unitOfWork.Product.Add(obj);
-            _unitOfWork.Save();
-            TempData["success"] = "Product created successfully.";
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
-        public IActionResult Update(Product obj)
-        {
-            _unitOfWork.Product.Update(obj);
-            _unitOfWork.Save();
-            TempData["success"] = "Product updated successfully.";
-            return RedirectToAction("Index");
+            return View(obj);
         }
 
         public IActionResult Delete(int id)
