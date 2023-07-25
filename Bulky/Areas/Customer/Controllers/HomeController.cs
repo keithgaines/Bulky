@@ -23,12 +23,17 @@ namespace Bulky.Areas.Customer.Controllers
             return View(productList);
         }
 
+        public IActionResult Details(int Id)
+        {
+            Product product = _unitOfWork.Product.Get(u => u.Id == Id, includeProperties: "Category");
+            return View(product);
+        }
+
         public IActionResult Privacy()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
