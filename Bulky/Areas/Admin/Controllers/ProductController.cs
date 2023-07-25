@@ -38,31 +38,30 @@ namespace Bulky.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Upsert(Product obj, IFormFile? file)
         {
-            if (ModelState.IsValid)
+            Console.WriteLine("_hostEnvironment.WebRootPath: " + _hostEnvironment.WebRootPath);
+            if (file != null)
             {
-                if (file != null)
-                {
-                    string uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "images");
-                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
-                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                    file.CopyTo(new FileStream(filePath, FileMode.Create));
-                    obj.ImageUrl = uniqueFileName;
-                }
-
-                if (obj.Id == 0)
-                {
-                    _unitOfWork.Product.Add(obj);
-                    TempData["success"] = "Product created successfully.";
-                }
-                else
-                {
-                    _unitOfWork.Product.Update(obj);
-                    TempData["success"] = "Product updated successfully.";
-                }
-
-                _unitOfWork.Save();
-                return RedirectToAction("Index");
+                string uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "images");
+                string uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                file.CopyTo(new FileStream(filePath, FileMode.Create));
+                obj.ImageUrl = uniqueFileName;
             }
+
+            if (obj.Id == 0)
+            {
+                _unitOfWork.Product.Add(obj);
+                TempData["success"] = "Product created successfully.";
+            }
+            else
+            {
+                _unitOfWork.Product.Update(obj);
+                TempData["success"] = "Product updated successfully.";
+            }
+
+            _unitOfWork.Save();
+            return RedirectToAction("Index");
+
 
             var categories = _unitOfWork.Category.GetAll().ToList();
             ViewData["Categories"] = categories;
