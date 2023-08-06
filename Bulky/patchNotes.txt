@@ -1,0 +1,8 @@
+Issues I ran into: 
+
+IEmailSender causing Register page to not render.
+	Problem: IEmailSender service wasn't registered in dependency injection in program.cs. 
+	Fix: 
+		Register it under ConfigureServices
+		Researched. Setup (incomplete) to use SendGrid API to send email instead of using smtp.
+
