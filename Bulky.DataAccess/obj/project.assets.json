@@ -4013,6 +4013,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9",
+          "Microsoft.Extensions.Identity.Stores": "7.0.9",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.8",
           "SendGrid": "9.28.1"
         },
