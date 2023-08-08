@@ -6,3 +6,14 @@ IEmailSender causing Register page to not render.
 		Register it under ConfigureServices
 		Researched. Setup (incomplete) to use SendGrid API to send email instead of using smtp.
 
+
+		Issue resolved couple lecture videos later. Setup EmailSender implementation to return taskcompleted instead of using sendgrid API. 
+
+
+Setup User Roles
+Assigns Role at registration
+
+
+Updated UI
+
+
