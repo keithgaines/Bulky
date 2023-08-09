@@ -6,7 +6,7 @@ namespace Bulky.Models.Models
     public class Company
     {
         [Key]
-        public int CompanyId { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }

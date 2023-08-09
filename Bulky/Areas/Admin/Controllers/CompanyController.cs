@@ -33,7 +33,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             else
             {
                 //update
-                Company companyObj = _unitOfWork.Company.Get(u => u.CompanyId == id);
+                Company companyObj = _unitOfWork.Company.Get(u => u.Id == id);
                 return View(companyObj);
             }
 
@@ -44,7 +44,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
 
-                if (CompanyObj.CompanyId == 0)
+                if (CompanyObj.Id == 0)
                 {
                     _unitOfWork.Company.Add(CompanyObj);
                 }
@@ -78,7 +78,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         [HttpDelete]
         public IActionResult Delete(int? id)
         {
-            var CompanyToBeDeleted = _unitOfWork.Company.Get(u => u.CompanyId == id);
+            var CompanyToBeDeleted = _unitOfWork.Company.Get(u => u.Id == id);
             if (CompanyToBeDeleted == null)
             {
                 return Json(new { success = false, message = "Error while deleting" });
