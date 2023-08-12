@@ -53,7 +53,7 @@ namespace Bulky.Areas.Customer.Controllers
             ShoppingCart cartFromDb = _unitOfWork.ShoppingCart.Get(u => u.ApplicationUserId == userId &&
             u.ProductId == shoppingCart.ProductId);
 
-            if (cartFromDb != null)
+            if (cartFromDb != null) // if shopping cart already exists
             {
                 // Increase the quantity of an existing product in the cart.
                 cartFromDb.Count += shoppingCart.Count;
@@ -72,6 +72,8 @@ namespace Bulky.Areas.Customer.Controllers
             TempData["success"] = "Cart updated successfully";
 
             // Redirect the user back to the product list.
+            // nameof references all the action methods in the controller
+            // meaning that instead of RedirectToAction("Index") you use nameof(ActionMethod) rather than the string name of the view
             return RedirectToAction(nameof(Index));
         }
 
