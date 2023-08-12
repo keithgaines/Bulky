@@ -1,6 +1,6 @@
 ﻿using Bulky.Data;
 using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models.Models;
+using Bulky.Models;
 
 namespace Bulky.DataAccess.Repository
 {
@@ -14,7 +14,7 @@ namespace Bulky.DataAccess.Repository
 
         public void Update(ShoppingCart obj)
         {
-            _db.Categories.Update(obj);
+            _db.ShoppingCarts.Update(obj);
         }
     }
 }

@@ -3,7 +3,7 @@
 #nullable disable
 
 using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models.Models;
+using Bulky.Models;
 using Bulky.Utility;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
@@ -113,7 +113,7 @@ namespace Bulky.Areas.Identity.Pages.Account
             public string? State { get; set; }
             public string? PostalCode { get; set; }
             public string? PhoneNumber { get; set; }
-            public int? CompanyId { get; set; }
+            public int? Id { get; set; }
             [ValidateNever]
             public IEnumerable<SelectListItem> CompanyList { get; set; }
 
@@ -163,7 +163,7 @@ namespace Bulky.Areas.Identity.Pages.Account
 
                 if (Input.Role == SD.Role_Company)
                 {
-                    user.CompanyId = Input.CompanyId;
+                    user.Id = Input.Id;
                 }
 
 

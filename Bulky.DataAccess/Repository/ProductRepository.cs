@@ -42,6 +42,7 @@ namespace Bulky.DataAccess.Repository
             return _db.Products.FirstOrDefault(p => p.Id == id);
         }
 
+
         public void Remove(int id)
         {
             var product = _db.Products.FirstOrDefault(p => p.Id == id);

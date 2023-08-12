@@ -1,11 +1,9 @@
 ﻿using Bulky.Models;
-using Bulky.Models.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-
-namespace Bulky.Data
+namespace BulkyBook.DataAcess.Data
 {
     public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
@@ -17,16 +15,21 @@ namespace Bulky.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Company> Companies { get; set; }
-        public DbSet<ApplicationUser> applicationUsers { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<OrderHeader> OrderHeaders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Category>().HasData(
-                new Category { CategoryId = 1, Name = "Action", DisplayOrder = 1 },
-                new Category { CategoryId = 2, Name = "SciFi", DisplayOrder = 2 },
-                new Category { CategoryId = 3, Name = "History", DisplayOrder = 3 }
+                new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
+                new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
+                new Category { Id = 3, Name = "History", DisplayOrder = 3 }
                 );
 
             modelBuilder.Entity<Company>().HasData(
@@ -62,6 +65,7 @@ namespace Bulky.Data
                 }
                 );
 
+
             modelBuilder.Entity<Product>().HasData(
                 new Product
                 {
@@ -74,8 +78,7 @@ namespace Bulky.Data
                     Price = 90,
                     Price50 = 85,
                     Price100 = 80,
-                    CategoryId = 2,
-                    ImageUrl = "fortune of time.jpg"
+                    CategoryId = 1
                 },
                 new Product
                 {
@@ -88,9 +91,7 @@ namespace Bulky.Data
                     Price = 30,
                     Price50 = 25,
                     Price100 = 20,
-                    CategoryId = 1,
-                    ImageUrl = "dark skies.jpg"
-
+                    CategoryId = 1
                 },
                 new Product
                 {
@@ -103,9 +104,7 @@ namespace Bulky.Data
                     Price = 50,
                     Price50 = 40,
                     Price100 = 35,
-                    CategoryId = 2,
-                    ImageUrl = "vanish in the sunset.jpg"
-
+                    CategoryId = 1
                 },
                 new Product
                 {
@@ -118,10 +117,7 @@ namespace Bulky.Data
                     Price = 65,
                     Price50 = 60,
                     Price100 = 55,
-                    CategoryId = 1,
-                    ImageUrl = "cotton candy.jpg"
-
-
+                    CategoryId = 2
                 },
                 new Product
                 {
@@ -134,10 +130,7 @@ namespace Bulky.Data
                     Price = 27,
                     Price50 = 25,
                     Price100 = 20,
-                    CategoryId = 3,
-                    ImageUrl = "rock in the ocean.jpg"
-
-
+                    CategoryId = 2
                 },
                 new Product
                 {
@@ -150,13 +143,9 @@ namespace Bulky.Data
                     Price = 23,
                     Price50 = 22,
                     Price100 = 20,
-                    CategoryId = 3,
-                    ImageUrl = "leaves and wonder.jpg"
-
-
+                    CategoryId = 3
                 }
                 );
-
         }
     }
 }
