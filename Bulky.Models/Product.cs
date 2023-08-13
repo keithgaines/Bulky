@@ -1,8 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Bulky.Models
+namespace BulkyBook.Models
 {
     public class Product
     {
@@ -37,7 +43,7 @@ namespace Bulky.Models
         public double Price100 { get; set; }
 
         public int CategoryId { get; set; }
-        [ForeignKey("Id")]
+        [ForeignKey("CategoryId")]
         [ValidateNever]
         public Category Category { get; set; }
 

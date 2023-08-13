@@ -1,15 +1,14 @@
-﻿using Bulky.Models;
-using System.Linq.Expressions;
+﻿using BulkyBook.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Bulky.DataAccess.Repository.IRepository
+namespace BulkyBook.DataAccess.Repository.IRepository
 {
     public interface IProductRepository : IRepository<Product>
     {
         void Update(Product obj);
-        void Save();
-        Product Get(int id);
-        void Remove(int id);
-
-        IEnumerable<Product> GetAllProductsIncludingCategories(Expression<Func<Product, bool>> filter = null);
     }
 }

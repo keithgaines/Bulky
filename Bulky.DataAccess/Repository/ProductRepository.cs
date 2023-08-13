@@ -1,55 +1,44 @@
-﻿using Bulky.Data;
-using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using BulkyBook.DataAccess.Repository.IRepository;
+using BulkyBook.DataAcess.Data;
+using BulkyBook.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Bulky.DataAccess.Repository
+namespace BulkyBook.DataAccess.Repository
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {
-        private readonly ApplicationDbContext _db;
-
+        private ApplicationDbContext _db;
         public ProductRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
 
-        public IEnumerable<Product> GetAllProductsIncludingCategories(Expression<Func<Product, bool>> filter = null)
-        {
-            IQueryable<Product> query = _db.Products.Include(p => p.Category);
-
-            if (filter != null)
-            {
-                query = query.Where(filter);
-            }
-
-            return query.ToList();
-        }
+        
 
         public void Update(Product obj)
         {
-            _db.Products.Update(obj);
-        }
-
-        public void Save()
-        {
-            _db.SaveChanges();
-        }
-
-        public Product Get(int id)
-        {
-            return _db.Products.FirstOrDefault(p => p.Id == id);
-        }
-
-
-        public void Remove(int id)
-        {
-            var product = _db.Products.FirstOrDefault(p => p.Id == id);
-            if (product != null)
+            var objFromDb = _db.Products.FirstOrDefault(u => u.Id == obj.Id);
+            if (objFromDb != null)
             {
-                _db.Products.Remove(product);
-                _db.SaveChanges();
+                objFromDb.Title = obj.Title;
+                objFromDb.ISBN = obj.ISBN;
+                objFromDb.Price = obj.Price;
+                objFromDb.Price50 = obj.Price50;
+                objFromDb.ListPrice = obj.ListPrice;
+                objFromDb.Price100 = obj.Price100;
+                objFromDb.Description = obj.Description;
+                objFromDb.CategoryId = obj.CategoryId;
+                objFromDb.Author = obj.Author;
+                objFromDb.ProductImages = obj.ProductImages;
+                //if (obj.ImageUrl != null)
+                //{
+                //    objFromDb.ImageUrl = obj.ImageUrl;
+                //}
             }
         }
     }
