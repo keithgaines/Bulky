@@ -4,6 +4,7 @@ using BulkyBook.DataAcess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BulkyBook.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230813192220_addedProductImages")]
+    partial class addedProductImages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -383,37 +386,37 @@ namespace BulkyBook.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            ImageUrl = "images/product/fortuneoftime.jpg",
+                            ImageUrl = "~/images/product/fortuneoftime.jpg",
                             ProductId = 1
                         },
                         new
                         {
                             Id = 2,
-                            ImageUrl = "images/product/darkskies.jpg",
+                            ImageUrl = "~/images/product/darkskies.jpg",
                             ProductId = 2
                         },
                         new
                         {
                             Id = 3,
-                            ImageUrl = "images/product/vanishinthesunset.jpg",
+                            ImageUrl = "~/images.product/vanishinthesunset.jpg",
                             ProductId = 3
                         },
                         new
                         {
                             Id = 4,
-                            ImageUrl = "images/product/cottoncandy.jpg",
+                            ImageUrl = "~/images/product/cottoncandy.jpg",
                             ProductId = 4
                         },
                         new
                         {
                             Id = 5,
-                            ImageUrl = "images/product/rockintheocean.jpg",
+                            ImageUrl = "~/images/product/cottoncandy.jpg",
                             ProductId = 5
                         },
                         new
                         {
                             Id = 6,
-                            ImageUrl = "images/product/leavesandwonders.jpg",
+                            ImageUrl = "~/images/product/leavesandwonders.jpg",
                             ProductId = 6
                         });
                 });
