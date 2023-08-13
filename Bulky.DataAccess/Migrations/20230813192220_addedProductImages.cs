@@ -17,12 +17,12 @@ namespace BulkyBook.DataAccess.Migrations
                 columns: new[] { "Id", "ImageUrl", "ProductId" },
                 values: new object[,]
                 {
-                    { 1, "C:\\repos\\Bulky\\BulkyWeb\\wwwroot\\images\\product\\fortuneoftime.jpg", 1 },
-                    { 2, "C:\\repos\\Bulky\\BulkyWeb\\wwwroot\\images\\product\\darkskies.jpg", 2 },
-                    { 3, "C:\\repos\\Bulky\\BulkyWeb\\wwwroot\\images\\product\\vanishinthesunset.jpg", 3 },
-                    { 4, "~/images/product/cottoncandy.jpg", 4 },
-                    { 5, "~/images/product/cottoncandy.jpg", 5 },
-                    { 6, "~/images/product/leavesandwonders.jpg", 6 }
+                    { 1, "images/product/fortuneoftime.jpg", 1 },
+                    { 2, "images/product/darkskies.jpg", 2 },
+                    { 3, "images/product/vanishinthesunset.jpg", 3 },
+                    { 4, "images/product/cottoncandy.jpg", 4 },
+                    { 5, "images/product/rockintheocean.jpg", 5 },
+                    { 6, "images/product/leavesandwonders.jpg", 6 }
                 });
         }
 
