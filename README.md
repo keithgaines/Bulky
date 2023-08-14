@@ -20,8 +20,6 @@ The Bulky Book Website is a feature-rich e-commerce platform built using ASP.NET
 
 - Social Logins: Google and Facebook login options provide convenient access for users.
 
-- Payment Processing: Payments are accepted using the Stripe payment gateway.
-
 - User Sessions: Sessions are managed to provide a seamless user experience.
 
 ## Getting Started
