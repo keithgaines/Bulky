@@ -12,6 +12,7 @@ namespace BulkyBook.DataAcess.Data
 
         }
 
+        // These DbSets create thet ables in the Db
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Company> Companies { get; set; }
@@ -23,15 +24,17 @@ namespace BulkyBook.DataAcess.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            // You need this line because of the Identity management
             base.OnModelCreating(modelBuilder);
 
+            // Seeds Category Data
             modelBuilder.Entity<Category>().HasData(
                 new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
                 new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
                 new Category { Id = 3, Name = "History", DisplayOrder = 3 }
                 );
 
+            // Seeds Company Data
             modelBuilder.Entity<Company>().HasData(
                 new Company
                 {
@@ -65,7 +68,7 @@ namespace BulkyBook.DataAcess.Data
                 }
                 );
 
-
+            // Seeds Product Data
             modelBuilder.Entity<Product>().HasData(
                 new Product
                 {
@@ -147,14 +150,15 @@ namespace BulkyBook.DataAcess.Data
                 }
                 );
 
+            // Seeds Product Images
             modelBuilder.Entity<ProductImage>().HasData(
-    new ProductImage { Id = 1, ImageUrl = "images/product/fortuneoftime.jpg", ProductId = 1 },
-    new ProductImage { Id = 2, ImageUrl = "images/product/darkskies.jpg", ProductId = 2 },
-    new ProductImage { Id = 3, ImageUrl = "images/product/vanishinthesunset.jpg", ProductId = 3 },
-    new ProductImage { Id = 4, ImageUrl = "images/product/cottoncandy.jpg", ProductId = 4 },
-    new ProductImage { Id = 5, ImageUrl = "images/product/rockintheocean.jpg", ProductId = 5 },
-    new ProductImage { Id = 6, ImageUrl = "images/product/leavesandwonders.jpg", ProductId = 6 }
-    );
+                new ProductImage { Id = 1, ImageUrl = "images/product/fortuneoftime.jpg", ProductId = 1 },
+                new ProductImage { Id = 2, ImageUrl = "images/product/darkskies.jpg", ProductId = 2 },
+                new ProductImage { Id = 3, ImageUrl = "images/product/vanishinthesunset.jpg", ProductId = 3 },
+                new ProductImage { Id = 4, ImageUrl = "images/product/cottoncandy.jpg", ProductId = 4 },
+                new ProductImage { Id = 5, ImageUrl = "images/product/rockintheocean.jpg", ProductId = 5 },
+                new ProductImage { Id = 6, ImageUrl = "images/product/leavesandwonders.jpg", ProductId = 6 }
+                );
         }
     }
 }
