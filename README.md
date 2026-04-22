@@ -1,63 +1,93 @@
-# Bulky Book Website - ASP.NET Core Project
+# Bulky Book — ASP.NET Core E-Commerce Platform
 
-Welcome to the Bulky Book Website ASP.NET Core project! This project showcases the development of a comprehensive e-commerce website where customers can browse, order products, and administrators can manage orders and transactions. Whether you're a beginner or an experienced developer, this project provides valuable insights into building real-world ASP.NET Core applications.
+ASP.NET Core e-commerce application demonstrating full-stack architecture with authentication, role-based authorization, payment processing, and admin-driven order management.
 
-## Project Overview
+---
 
-The Bulky Book Website is a feature-rich e-commerce platform built using ASP.NET Core. The main functionalities of the project include:
+## Overview
 
-- Browsing Products: Customers can explore a wide range of products available on the platform.
+Bulky Book is a server-rendered e-commerce platform built with ASP.NET Core. It focuses on building a production-style architecture for managing products, user sessions, orders, and payments.
 
-- Adding to Cart: Users can add products to their cart for purchasing.
+Core focus areas:
+- Full-stack ASP.NET MVC architecture
+- Secure authentication and authorization
+- Order lifecycle management
+- Payment integration with Stripe
+- Admin vs customer role separation
 
-- Order Placement: Customers can proceed to checkout and place orders using their credit cards.
+---
 
-- Order Management: Administrators have the ability to view, process, and manage orders.
+## Key Features
 
-- Authentication and Authorization: Secure user registration and login processes are implemented, and role-based authorization ensures appropriate access.
+- Product browsing and catalog management  
+- Shopping cart and checkout flow  
+- Stripe-based payment processing  
+- Order creation and admin order management  
+- Role-based authentication (Admin / Customer)  
+- User registration and secure login system  
+- Email notifications for order events  
+- Session-based cart persistence  
+- Social login integration (Google, Facebook)  
 
-- Email Notifications: Users receive email notifications for order confirmation and other important updates.
+---
 
-- Social Logins: Google and Facebook login options provide convenient access for users.
+## Technical Stack
 
-- User Sessions: Sessions are managed to provide a seamless user experience.
+- ASP.NET Core MVC  
+- C#  
+- Entity Framework Core  
+- SQL Server  
+- ASP.NET Identity  
+- Stripe API  
+
+---
+
+## Architecture Overview
+
+The application follows a layered MVC structure:
+
+- **Controllers** — Request handling and application flow  
+- **Views** — Razor UI rendering layer  
+- **Models** — Domain entities and data contracts  
+- **Data Layer** — DbContext and migrations (Entity Framework Core)  
+- **Services Layer** — Business logic and external service integrations  
+
+This separation supports maintainability and scalable feature extension.
+
+---
+
+## Key Engineering Decisions
+
+- Used ASP.NET Identity for secure authentication and role-based authorization  
+- Structured order processing to separate cart state from finalized orders  
+- Integrated Stripe to handle external payment workflows securely  
+- Designed session-based cart handling for stateless HTTP compatibility  
+
+---
+
+## What This Project Demonstrates
+
+- Full-stack ASP.NET Core MVC application design  
+- Authentication and authorization system implementation  
+- Payment gateway integration (Stripe)  
+- Database-driven application architecture using EF Core  
+- Separation of concerns in backend system design  
+
+---
 
 ## Getting Started
 
-To get started with the Bulky Book Website project, follow these steps:
+To run locally:
 
-1. Clone this repository to your local machine.
+1. Clone repository  
+2. Open in Visual Studio or compatible IDE  
+3. Configure `appsettings.json` (database + Stripe keys)  
+4. Run Entity Framework migrations  
+5. Restore dependencies  
+6. Run application  
 
-2. Open the project in your preferred development environment (e.g., Visual Studio, Visual Studio Code).
+---
 
-3. Configure App Settings: Update the app settings with your database connection string, Stripe API keys, and other relevant configurations.
+## Context
 
-4. Set Up Database: Run Entity Framework migrations to set up the database schema.
-
-5. Install Dependencies: Restore NuGet packages and ensure all dependencies are installed.
-
-6. Run the Application: Build and run the application. Access it through your browser.
-
-## Technologies Used
-
-- ASP.NET Core: A powerful and flexible framework for building web applications.
-
-- Entity Framework Core: An Object-Relational Mapping (ORM) tool for database operations.
-
-- Identity Framework: Provides authentication and authorization capabilities.
-
-- Stripe: A popular payment gateway for processing online payments.
-
-## Project Structure
-
-The project follows a structured architecture to ensure maintainability and scalability:
-
-- **Controllers**: Handle user requests and manage application flow.
-
-- **Views**: Render HTML templates to display the user interface.
-
-- **Models**: Define data entities and business logic.
-
-- **Data**: Contains database context and migration files.
-
-- **Services**: Implement business logic and interactions with external services.
+This project was built as a practical exercise in full-stack .NET development, focusing on real-world patterns such as authentication flows, payment processing, and layered architecture design.
